@@ -1,23 +1,22 @@
-package org.example;
-
-public class uc4 {
+public class uc5 {
     public static void main(String[] args) {
+
+        // Case 1: No arguments provided
         if (args.length == 0) {
             System.out.println("Hello, World!");
             return;
         }
 
+        // Case 2: Arguments provided
         StringBuilder nameBuilder = new StringBuilder();
 
         for (int i = 0; i < args.length; i++) {
-            nameBuilder.append(args[i]);
-
-            if (i < args.length - 1) {
+            if (i > 0) {
                 nameBuilder.append(", ");
             }
+            nameBuilder.append(args[i]);
         }
 
-        // Print final greeting
         System.out.println("Hello, " + nameBuilder.toString() + "!");
     }
 }
